@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onPlayPress(sender: UIButton!){
+    @IBAction func onPlayPress(sender: UIButton){
         if (tapsText.text != nil && tapsText.text != ""){
             
             logoImg.hidden = true
@@ -45,9 +45,12 @@ class ViewController: UIViewController {
             
             updateTapsLabel()
         }
+        else{
+            tapsText.text = "Put a valid number!!"
+        }
     }
 
-    @IBAction func onCoinTap(sender: UIButton!){
+    @IBAction func onCoinTap(sender: UIButton){
         currentTaps += 1
         updateTapsLabel()
         
@@ -58,7 +61,7 @@ class ViewController: UIViewController {
 
     func restartGame(){
         maxTaps = 0
-        tapsText = nil
+        tapsText.text = ""
         logoImg.hidden = false
         tapsText.hidden = false
         playButton.hidden = false
