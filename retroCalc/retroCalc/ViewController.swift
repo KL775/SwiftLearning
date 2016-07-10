@@ -49,11 +49,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numberPress(btn: UIButton!){
-        
         playSound()
+        displayNum = ""
         displayNum += "\(btn.tag)"
         outLabel.text = displayNum
-
     }
     
     @IBAction func onDividePress(sender: AnyObject) {
