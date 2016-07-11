@@ -31,6 +31,12 @@ class ViewController: UIViewController {
         
     }
     
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func firstPlayerAttack(sender: AnyObject){
         //p1btn.enabled = false
         //NSTimer.scheduledTimerWithTimeInterval(3.0, target: p1btn, selector: #selector(ViewController.enableButtonOne), userInfo: nil, repeats: false)
@@ -76,12 +82,6 @@ class ViewController: UIViewController {
         playerTwo.hp = 100
         unhide()
         displayLabel.text = "\(playerOne.name) is fighting \(playerTwo.name)"
-    }
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func enableButtonOne(){
