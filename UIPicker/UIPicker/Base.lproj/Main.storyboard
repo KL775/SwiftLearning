@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noparkingass" translatesAutoresizingMaskIntoConstraints="NO" id="AF1-ug-ODo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5m5-P9-nrJ">
+                                <rect key="frame" x="0.0" y="142" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rxY-QL-82j"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AF1-ug-ODo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6A9-W3-bCZ"/>
+                            <constraint firstItem="5m5-P9-nrJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Bck-t5-vRs"/>
+                            <constraint firstItem="AF1-ug-ODo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="VjE-jX-6bd"/>
+                            <constraint firstItem="5m5-P9-nrJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W8u-ba-FaG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AF1-ug-ODo" secondAttribute="trailing" constant="-20" id="jPa-22-tnG"/>
+                            <constraint firstItem="5m5-P9-nrJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rwI-5i-WaK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AF1-ug-ODo" secondAttribute="bottom" id="tv3-ke-v50"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DMPicker" destination="5m5-P9-nrJ" id="wC4-tx-v95"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noparkingass" width="2500" height="1395"/>
+    </resources>
+</document>
